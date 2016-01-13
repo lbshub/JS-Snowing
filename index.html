@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>下雪效果</title>
+
+	<style type="text/css">
+		*{margin: 0; padding: 0;}
+		.snow_box{width: 100%; position: fixed; left: 0; top: 0; z-index: 999; overflow-x: hidden;}
+		.i_snow{position: fixed; top:-60px; color: #fff; z-index: 80;}
+	</style>
+
+</head>
+<body>
+
+<div style="height:500px;background: #f00;"></div>
+<div style="height:500px;background: #000;"></div>
+<div style="height:500px;background: #f00;"></div>
+<div style="height:500px;background: #000;"></div>
+<div class="snow_box" id="snow_box"></div>
+
+<script type="text/javascript" src="Snowing.js"></script>
+<script type="text/javascript">
+	// new Snowing();
+	new Snowing({
+		parent: document.getElementById('snow_box'),
+		name: 'i_snow',
+		rate: 8
+	});
+</script>
+
+</body>
+</html>
+
